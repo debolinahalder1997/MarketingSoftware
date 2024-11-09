@@ -12,9 +12,10 @@ const dotenv = require("dotenv");
 // Specify the path to your .env file
 
 require("dotenv").config({ path: "../../../.env" });
-var ID = "AKIAU6GDVOUTY4EORUEX";
-var SECRET = "HMe/UOx5TDG+kDfrPSfPNWNvbjCyaGkxfaN999Nh";
-var BUCKET_NAME = "images.bangasreejewellers.in";
+var ID = process.env.ID;
+var SECRET = process.env.SECRET;
+var BUCKET_NAME = process.env.BUCKET_NAME;
+
 console.log(SECRET, BUCKET_NAME, "s14");
 const s3 = new AWS.S3({
   accessKeyId: ID,
